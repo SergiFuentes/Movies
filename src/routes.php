@@ -12,11 +12,11 @@ $result = $query->fetchAll();
 $controller = new MovieController();
 
 if ($uri == '/movies' || $uri == '/') {
-    //require_once __DIR__ . '/Views/pages/MovieList.php';
+    require_once __DIR__ . '/Views/pages/MovieList.php';
     $controller -> index();
 }
 
 if ($uri == '/movies/create') {
-    //require_once __DIR__ . '/Views/pages/MovieCreate.php';
+    require_once __DIR__ . '/Views/pages/MovieCreate.php';
     $controller->create();
 }
