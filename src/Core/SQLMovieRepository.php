@@ -3,7 +3,7 @@
 namespace App\Core;
 
 
-class SQLMovieRepository {
+class SQLMovieRepository implements IMovieRepository{
 
         private $table = 'movies';
         private $conexion;
