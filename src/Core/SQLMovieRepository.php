@@ -3,7 +3,6 @@
 namespace App\Core;
 
 
-
 class SQLMovieRepository {
 
         private $table = 'movies';
