@@ -5,9 +5,10 @@ use App\Core\SQLConexion;
 //var_dump ($_SERVER);
 $uri = $_SERVER["REQUEST_URI"];
 
-$db = (new SQLConexion())->mysql;
+/*$db = (new SQLConexion())->mysql;
 $query = $db->query("SELECT * FROM movies ");
-$result = $query->fetchAll();
+$result = $query->fetchAll();*/
+
 
 $controller = new MovieController();
 

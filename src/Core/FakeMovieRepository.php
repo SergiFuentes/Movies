@@ -26,4 +26,8 @@ class FakeMovieRepsoitory implements IMovieRepository
     public function getAll(){
         return $this->movies;
     }
+
+    function save($title, $image){
+        $this->db->save($this->title, $this->image);
+    }
 }

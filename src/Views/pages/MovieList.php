@@ -14,7 +14,7 @@ require_once __DIR__ . '/../layouts/default.php';
         <div class='card' style='width: 18rem'>
             <img src= {$movie->image} class='card-img-top'>
             <div class='card-body'>
-                <h5 class='card-title'>$movie->title}</h5>
+                <h5 class='card-title'>{$movie->title}</h5>
             </div>
         </div>
         ";

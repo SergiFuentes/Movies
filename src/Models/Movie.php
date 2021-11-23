@@ -29,4 +29,8 @@ class Movie {
         }
         return $movieList;
     }
+
+    public function save(){
+        $this->query->save($this->title, $this->image);
+    }
 }

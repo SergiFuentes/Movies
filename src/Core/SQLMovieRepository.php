@@ -20,4 +20,9 @@ class SQLMovieRepository implements IMovieRepository{
             return $result;
         }
 
+        function save($title, $image){
+            $this->conexion->query("INSERT INTO `{$this->table}`(`title`,`image`) VALUES ('{$title}', '{$image}')");
+        }
+        
+
     }
