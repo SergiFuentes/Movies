@@ -7,7 +7,7 @@ use App\Core\IMovieRepository;
 use App\Core\SQLMovieRepository;
 
 class Movie {
-    public $id;
+    public ?int $id= null;
     public $title;
     public $image;
     private IMovieRepository $db;
@@ -15,7 +15,7 @@ class Movie {
     public function __construct ($data = null)
     {
         if($data) {
-            $this-> id = $data['id'];
+            $this->id = isset ($data['id']) ? $data['id'] : null;
             $this-> title = $data['title'];
             $this-> image = $data['image'];
         }
@@ -31,6 +31,6 @@ class Movie {
     }
 
     public function save(){
-        $this->query->save($this->title, $this->image);
+        $this->db->save($this->title, $this->image);
     }
 }
